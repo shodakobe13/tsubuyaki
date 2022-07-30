@@ -41,7 +41,8 @@ public class TsubuyakiController {
         ts.postTsubuyaki(t);  
         return "redirect:/read"; //メイン画面に転送
     }
-     //つぶやきを検索
+
+    //つぶやきを検索
      @GetMapping("/search")
      String searchTsubuyaki(@RequestParam("comment") String comment, Model model) {
          List<Tsubuyaki> list = ts.searchTsubuyaki(comment); 
